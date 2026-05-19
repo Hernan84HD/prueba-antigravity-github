@@ -1,0 +1,51 @@
+[debug] [2026-05-19T05:33:28.984Z] ----------------------------------------------------------------------
+[debug] [2026-05-19T05:33:29.060Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\herna\AppData\Local\npm-cache\_npx\7750544ccf494d8b\node_modules\firebase-tools\lib\bin\firebase.js init hosting:github
+[debug] [2026-05-19T05:33:29.061Z] CLI Version:   15.18.0
+[debug] [2026-05-19T05:33:29.061Z] Platform:      win32
+[debug] [2026-05-19T05:33:29.061Z] Node Version:  v20.17.0
+[debug] [2026-05-19T05:33:29.061Z] Time:          Tue May 19 2026 02:33:29 GMT-0300 (hora estándar de Argentina)
+[debug] [2026-05-19T05:33:29.062Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2026-05-19T05:33:29.065Z] >>> [apiv2][query] GET https://firebase-public.firebaseio.com/cli.json [none]
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\Users\herna\prueba-antigravity-github
+
+Before we get started, keep in mind:
+
+  * You are initializing within an existing Firebase project directory
+
+[debug] [2026-05-19T05:34:24.532Z] <<< [apiv2][status] GET https://firebase-public.firebaseio.com/cli.json 200
+[debug] [2026-05-19T05:34:24.533Z] <<< [apiv2][body] GET https://firebase-public.firebaseio.com/cli.json {"cloudBuildErrorAfter":1594252800000,"cloudBuildWarnAfter":1590019200000,"defaultNode10After":1594252800000,"minVersion":"3.0.5","node8DeploysDisabledAfter":1613390400000,"node8RuntimeDisabledAfter":1615809600000,"node8WarnAfter":1600128000000}
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] 
+[debug] [2026-05-19T05:35:05.472Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2026-05-19T05:35:05.473Z] > authorizing via signed-in user (hernanhduarte@gmail.com)
+[debug] [2026-05-19T05:35:05.475Z] Checked if tokens are valid: false, expires at: 1778877779055
+[debug] [2026-05-19T05:35:05.475Z] Checked if tokens are valid: false, expires at: 1778877779055
+[debug] [2026-05-19T05:35:05.476Z] > refreshing access token with scopes: []
+[debug] [2026-05-19T05:35:05.479Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2026-05-19T05:35:05.479Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2026-05-19T05:35:05.614Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2026-05-19T05:35:05.614Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2026-05-19T05:35:05.672Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/proyectogithub [none]
+[debug] [2026-05-19T05:35:06.026Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/proyectogithub 403
+[debug] [2026-05-19T05:35:06.026Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/proyectogithub {"error":{"code":403,"message":"The caller does not have permission","status":"PERMISSION_DENIED"}}
+[debug] [2026-05-19T05:35:06.028Z] Request to https://firebase.googleapis.com/v1beta1/projects/proyectogithub had HTTP Error: 403, The caller does not have permission
+[debug] [2026-05-19T05:35:06.030Z] FirebaseError: Request to https://firebase.googleapis.com/v1beta1/projects/proyectogithub had HTTP Error: 403, The caller does not have permission
+    at responseToError (C:\Users\herna\AppData\Local\npm-cache\_npx\7750544ccf494d8b\node_modules\firebase-tools\lib\responseToError.js:53:12)
+    at RetryOperation._fn (C:\Users\herna\AppData\Local\npm-cache\_npx\7750544ccf494d8b\node_modules\firebase-tools\lib\apiv2.js:333:77)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[error] 
+[error] Error: Failed to get Firebase project proyectogithub. Please make sure the project exists and your account has permission to access it.
