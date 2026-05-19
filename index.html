@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Celebration Portal | Antigravity</title>
+    <meta name="description" content="Una experiencia web premium interactiva que muestra diseño moderno, animaciones fluidas y efectos de celebración sintetizados en tiempo real.">
+    
+    <!-- Google Fonts: Outfit for sleek, modern headers and Inter for clean body text -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@400;600;800&display=swap" rel="stylesheet">
+    
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Background Animated Mesh Glows -->
+    <div class="bg-glow bg-glow-1"></div>
+    <div class="bg-glow bg-glow-2"></div>
+    <div class="bg-grid"></div>
+
+    <header class="app-header">
+        <div class="header-container">
+            <div class="logo">
+                <span class="logo-dot"></span>
+                <span class="logo-text">Celebration<span>Lab</span></span>
+            </div>
+            <nav class="header-nav">
+                <a href="#features" class="nav-link">Características</a>
+                <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="nav-link github-link">
+                    <span>GitHub</span>
+                    <svg class="external-icon" viewBox="0 0 24 24" width="14" height="14">
+                        <path fill="currentColor" d="M5 19h14V5H12V3h7a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-7h2v7zM19 5v3h-2V5h-3V3h5a1 1 0 0 1 1 1v1zM9 11l6-6 1.41 1.41L10.41 12.41 9 11z"/>
+                    </svg>
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="app-main">
+        <section class="hero-section">
+            <div class="hero-card">
+                <div class="card-badge">Demostración Interactiva</div>
+                <h1 class="hero-title">Experimenta la Magia de la <span>Interactividad</span></h1>
+                <p class="hero-subtitle">Presiona el botón de abajo para desencadenar una celebración visual premium impulsada por físicas en tiempo real y audio sintetizado.</p>
+                
+                <div class="action-container">
+                    <button id="celebrate-btn" class="btn-blue-glow" aria-label="Presiona para celebrar">
+                        <span class="btn-text">¡Haz Clic para Celebrar!</span>
+                        <span class="btn-shine"></span>
+                        <svg class="btn-icon" viewBox="0 0 24 24" width="20" height="20">
+                            <path fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Overlay & Congratulations Modal -->
+    <div id="modal-overlay" class="modal-overlay" aria-hidden="true"></div>
+    <div id="congrats-modal" class="congrats-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" aria-hidden="true">
+        <canvas id="confetti-canvas"></canvas>
+        <div class="modal-content">
+            <div class="modal-badge-wrapper">
+                <div class="modal-badge">
+                    <svg class="badge-icon" viewBox="0 0 24 24" width="28" height="28">
+                        <path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+                    </svg>
+                </div>
+            </div>
+            
+            <h2 id="modal-title" class="modal-title">¡Muchas Felicidades!</h2>
+            <p class="modal-description">Has desbloqueado esta ventana de felicitación. Un diseño interactivo ultra moderno, con físicas de confeti personalizadas y sonido espacial sintetizado.</p>
+            
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <span class="stat-value" id="stat-particles">250+</span>
+                    <span class="stat-label">Partículas</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-value" id="stat-sound">Web Audio</span>
+                    <span class="stat-label">Sintetizador</span>
+                </div>
+            </div>
+
+            <button id="close-modal-btn" class="btn-secondary" aria-label="Cerrar ventana de felicitaciones">
+                <span>Continuar</span>
+            </button>
+        </div>
+    </div>
+
+    <footer class="app-footer">
+        <div class="footer-container">
+            <p>&copy; 2026 CelebrationLab. Diseñado con excelencia visual y micro-interacciones.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="app.js"></script>
+</body>
+</html>
